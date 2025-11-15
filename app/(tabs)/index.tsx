@@ -50,10 +50,11 @@ const styles = StyleSheet.create({
 });
 
 
-const PanicScreen = () => {
+const PanicScreen  = () => {
     
     // Función que se ejecutaría al presionar el botón
     const triggerAlarm = () => {
+        window.alert("Alarma Vecinal Activada");
         // Muestra un diálogo de confirmación similar al de Java
         Alert.alert(
             "Confirmar Alarma",
@@ -68,6 +69,7 @@ const PanicScreen = () => {
                     onPress: () => {
                         // AQUÍ iría la lógica para enviar la petición al servidor (Axios, Fetch, etc.)
                         console.log("Alerta enviada a la API.");
+                        window.alert("Alerta enviada correctamente");
                         Alert.alert("Alerta Enviada", "¡La alerta ha sido enviada a tus vecinos!");
                         
                         // NOTA: La lógica para reproducir el sonido fuerte en los receptores
